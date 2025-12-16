@@ -13,6 +13,11 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// ---------- ROTA DE TESTE ----------
+app.get("/", (req, res) => {
+  res.send("API online 🚀");
+});
+
 // ---------- CONEXÃO COM POSTGRES ----------
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
